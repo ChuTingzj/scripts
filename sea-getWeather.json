@@ -1,0 +1,5 @@
+{
+  "main": "./getWeather.js",
+  "output": "./getWeather.blob",
+  "disableExperimentalSEAWarning": true
+}

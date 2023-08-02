@@ -15,4 +15,4 @@ for (const wevIndex in argv) {
     webpackEv += `--${argv[wevIndex].split('_')[1]} ${Reflect.get(argv,Number(wevIndex)+1)} `
   }
 }
-execSync(`npx webpack ${webpackEv} --progress --color`)
+execSync(`npx webpack ${webpackEv}`)

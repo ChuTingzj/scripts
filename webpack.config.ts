@@ -12,6 +12,9 @@ const config: Configuration = {
   output: {
     filename:process.env.filename,
   },
+  resolve:{
+    extensions:['.ts','...']
+  },
   module:{
     rules:[
       {
@@ -21,7 +24,7 @@ const config: Configuration = {
             'ts-loader'
         ]
     },
-    ]
+    ],
   },
   plugins: [
 		new NodePolyfillPlugin({

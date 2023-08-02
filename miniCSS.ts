@@ -1,8 +1,8 @@
 import chalk from 'chalk';
 import {transform} from 'lightningcss';
-import {writeFile,readFile} from 'node:fs/promises';
-import {argv} from 'node:process';
-import {resolve} from 'node:path';
+import {writeFile,readFile} from 'fs/promises';
+import {argv} from 'process';
+import {resolve} from 'path';
 const getFileSize = (content:Buffer) => new Blob([content]).size
 const inputFileNameIndex = argv.findIndex(item=>item==='--input') 
 const input = argv[inputFileNameIndex+1]
