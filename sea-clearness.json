@@ -1,0 +1,5 @@
+{
+  "main": "./clearness.js",
+  "output": "./clearness.blob",
+  "disableExperimentalSEAWarning": true
+}
