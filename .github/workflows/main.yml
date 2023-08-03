@@ -25,7 +25,7 @@ jobs:
         run_install: false
 
     - name: Install global dependencies
-      run: npm install ts-node tsc -g
+      run: npm install postject ts-node tsc -g
 
     - name: Install dependencies
       run: pnpm install
