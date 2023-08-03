@@ -31,4 +31,4 @@ jobs:
       run: pnpm install
 
     - name: Generate
-      run: pnpm run generate:*
+      run: pnpm run generate:clearness && pnpm run generate:getWeather && pnpm run generate:getNpmPackageVersion 
