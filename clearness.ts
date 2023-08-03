@@ -1,5 +1,5 @@
 #! /usr/bin/env ts-node
-import {execSync} from 'node:child_process';
+import {execSync} from 'child_process';
 const argv = process.argv;
 const pwd = process.env.pwd!;
 const help = `

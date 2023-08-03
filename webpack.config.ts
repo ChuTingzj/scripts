@@ -4,6 +4,7 @@ declare global{
   namespace NodeJS{
     interface ProcessEnv{
       filename:string
+      PACK_ENV:'webpack'|'tsc'
     }
   }
 }

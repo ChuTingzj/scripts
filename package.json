@@ -1,11 +1,9 @@
 {
   "name": "scripts",
   "scripts": {
-    "1": "node --experimental-sea-config sea-config.json",
-    "2": "cp (Get-Command node).Source hello.exe",
-    "3": "signtool remove /s hello.exe",
-    "4": "npx postject hello.exe NODE_SEA_BLOB sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2",
-    "generate": "ts-node ./setEnv.ts --filename getWeather.js -webpack_entry ./getWeather.ts"
+    "generate:clearness": "ts-node ./setEnv.ts --PACK_ENV tsc --filename clearness.js -tsc_entry ./clearness.ts",
+    "generate:getWeather": "ts-node ./setEnv.ts --PACK_ENV webpack --filename getWeather.js -webpack_entry ./getWeather.ts",
+    "generate:getNpmPackageVersion": "ts-node ./setEnv.ts --PACK_ENV webpack --filename getNpmPackageVersion.js -webpack_entry ./getNpmPackageVersion.ts"
   },
   "dependencies": {
     "@types/node": "^20.4.5",
