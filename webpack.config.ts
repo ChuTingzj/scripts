@@ -1,4 +1,5 @@
 import {Configuration} from 'webpack';
+import {resolve} from 'path';
 import NodePolyfillPlugin from 'node-polyfill-webpack-plugin';
 declare global{
   namespace NodeJS{
@@ -11,6 +12,7 @@ declare global{
 const config: Configuration = {
   mode: 'production',
   output: {
+    path:resolve(__dirname,`dist_${process.env.filename!.split('.')[0]}`),
     filename:process.env.filename,
   },
   resolve:{

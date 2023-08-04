@@ -23,10 +23,10 @@ for (const index in argv) {
 }
 if(webpackEv){
   execSync(`npx webpack ${webpackEv}`);
-  copyFile(resolve(__dirname,`./dist/${process.env.filename}`),resolve(__dirname,`./${process.env.filename}`),(err)=>{
+  copyFile(resolve(__dirname,`./dist_${process.env.filename!.split('.')[0]}/${process.env.filename}`),resolve(__dirname,`./${process.env.filename}`),(err)=>{
     if(err)throw err;
-    process.platform==="win32"&&execSync('rm -rf ./dist',{shell:'D:\\Git\\bin\\bash.exe'})
-    process.platform==="linux"&&execSync('rm -rf dist')
+    process.platform==="win32"&&execSync(`rm -rf ./dist_${process.env.filename!.split('.')[0]}`,{shell:'D:\\Git\\bin\\bash.exe'})
+    process.platform==="linux"&&execSync(`rm -rf dist_${process.env.filename!.split('.')[0]}`)
     execSync(`ts-node ./gen.ts --name ${process.env.filename!.split('.')[0]}`)
   })
 }
